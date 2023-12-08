@@ -1,0 +1,750 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+html{
+    --color: #999;
+    --checked-color: #622828;
+}
+#accent{
+    accent-color: var(--checked-color);
+}
+.switch input:checked + .slider:before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.car_feat_item{
+    column-count: 2;
+    column-gap: 30px;
+}
+.welcome{
+    @apply bg-mainRed w-[100%] 
+}
+.welcome_header{
+    @apply text-center pt-5 font-extrabold text-lg text-white
+}
+.box1{
+    @apply w-[7.5rem] bg-black h-[7.5rem] relative top-28 left-20 bottom-10 rounded-md
+}
+.box2{
+    @apply w-[3.7rem] bg-black h-[3.7rem] relative top-10 left-64 rounded-md
+}
+.box3{
+    @apply w-8 bg-black h-8 relative top-16 left-64 rounded-md
+}
+.wlc_car{
+    @apply w-[100%] items-center justify-center -mt-20 z-50 relative
+}
+.below_screen{
+    @apply bg-white w-[100%] rounded-t-3xl pt-5 text-center pl-5 pr-5 pb-10 absolute bottom-0
+}
+.below_top{
+    @apply text-3xl font-semibold
+}
+.below_cont{
+    @apply text-base font-medium py-2
+}
+.below_btns{
+    @apply mt-8 flex items-center justify-center space-x-12
+}
+.below_sign{
+    @apply border-black border rounded-lg px-5 py-2 text-sm font-semibold cursor-pointer
+}
+.below_sign:hover{
+    @apply bg-secondRed text-white border-0
+}
+.choose{
+    @apply h-[100vh]
+}
+.brand_logo{
+    @apply mb-10
+}
+.center{
+    @apply block ml-auto mr-auto  pt-[25%]
+}
+.brand_name{
+    @apply text-3xl font-extrabold text-3xl text-white text-center
+}
+.brand_auth{
+    @apply pt-5 text-center
+}
+.brand_auth p{
+    @apply my-3 w-[60%] mx-auto
+}
+.user_option{
+    @apply text-lg border-black rounded-md px-5 py-2 text-white shadow-md shadow-black mx-auto
+}
+.brand_auth span{
+    @apply text-base text-lg text-white my-5
+}
+/* SignUp Screen */
+.signup{
+    @apply  py-5 px-3 text-white
+}
+.create_acc{
+    @apply text-white font-semibold text-2xl pl-2 pt-5
+}
+.form_input{
+    @apply block py-2
+}
+.form_input label{
+    @apply block pb-[0.5rem] font-medium text-base
+}
+.form_input input{
+    @apply w-[100%] mx-auto py-1 px-2 rounded-md bg-inputBox outline-none
+}
+.form_input_btn{
+    @apply bg-white border text-secondRed py-1 px-2 text-center font-semibold text-base w-[100%] rounded-lg mt-5
+}
+.login_options{
+    @apply mt-10 py-8 pb-14 bg-white w-full rounded-t-xl text-secondRed 
+}
+.login_options .already{
+    @apply text-center font-medium text-base
+}
+.login_options .form_input_btn{
+    @apply mx-auto bg-whiteBtnBg w-[90%]
+}
+/* Login Screen */
+.forget_pass{
+    @apply text-xs font-light text-right
+}
+/* Home Screen */
+.search_location{
+    @apply absolute top-32 w-full bg-transparent mx-auto left-0 bottom-0 right-0
+}
+.loc{
+    @apply mx-auto w-[80%]
+}
+.loca_icon{
+    @apply w-[100%] bg-white h-fit rounded-md
+}
+.loca_icon input{
+    @apply block my-2 py-1 mx-auto w-[80%] outline-none pl-2
+}
+/* Below Screen */
+.below{
+    @apply absolute bottom-0 bg-mainRed w-full rounded-t-xl py-4
+}
+.below_img{
+    @apply w-[2.5rem] mx-auto border p-2 bg-white rounded-md my-4
+}
+.ride_info{
+    @apply flex items-center justify-between px-4 my-6
+}
+.r_in{
+    @apply flex space-x-2 text-white text-base font-normal
+}
+.taxi_req{
+    @apply py-[0.35rem] w-[80%] mx-auto mb-3 mt-3 
+}
+/* Nearby You  */
+.nearby{
+    @apply rounded-t-xl w-full bg-white px-3 pt-2
+}
+.nearby_head{
+    @apply text-black font-semibold text-xl py-2
+}
+.nearby_driver{
+    @apply bg-[#e6e3e3] px-5 pb-3
+}
+.driver_info{
+    @apply flex items-center space-x-5 py-3
+}
+.driver_info img{
+    @apply w-16
+}
+.dri_name .driver_name{
+    @apply text-black text-lg font-semibold
+}
+.dri_name .rating{
+    @apply flex items-center gap-3 text-base font-medium
+}
+.dri_name .rating img{
+    @apply w-4
+}
+.driver_prof{
+    @apply flex items-center justify-between px-3
+}
+.dri_do{
+    @apply flex items-center gap-5
+}
+.do{
+    @apply flex gap-2 items-center
+}
+.do span{
+    @apply text-sm font-normal
+}
+.call{
+    @apply border bg-mainRed px-6 py-2 rounded-lg
+}
+.call_btn{
+    @apply text-white text-lg font-medium
+}
+.naira{
+    @apply line-through decoration-double
+}
+.driver_pop{
+    @apply absolute  bottom-0 bg-mainRed w-full px-5 pt-8 pb-8 rounded-t-3xl
+}
+.dest_loc{
+    @apply flex gap-3 items-center text-white w-fit mx-auto
+}
+.st_en{
+    @apply flex items-center gap-3 text-white text-lg font-normal
+}
+.st_en img{
+    @apply w-[1.2rem] pt-2
+}
+.st_en span{
+    @apply text-[1.3rem]
+}
+.pop_pro{
+    @apply flex items-center justify-between mt-5 mb-3
+}
+.poppp{
+    @apply flex items-center gap-5
+}
+.poppp img{
+    @apply w-[75px] 
+}
+.pop_name{
+    @apply text-white text-xl font-medium pb-1
+}
+.pop_car_no{
+    @apply text-base font-normal text-[#7177AB]
+}
+.pop_star{
+    @apply flex items-center gap-3 bg-inputBox rounded-lg py-2 px-4
+}
+.pop_star img{
+    @apply w-[1.5rem]
+}
+.pop_star p{
+    @apply font-bold text-lg text-white
+}
+.seat_tim{
+    @apply text-white font-normal text-3xl pb-3 pt-2
+}
+.seat_sel{
+    @apply flex items-center justify-between
+}
+.seat_sel .sel_se{
+    @apply text-white text-lg font-normal py-2
+}
+.seat_no{
+    @apply flex items-center gap-2
+}
+.seat_num{
+    @apply bg-inputBox font-medium text-white px-4 py-2 rounded-xl
+}
+/* .seat_num:hover{
+    @apply bg-white text-black
+} */
+.seat_num:active{
+    @apply bg-white text-black
+}
+.seat_no .seat_now{
+    @apply bg-white px-4 py-2 text-black text-lg rounded-lg
+}
+.seat_no img{
+    @apply bg-inputBox px-4 py-[0.6rem] rounded-lg
+}
+.seat_sch{
+    @apply mt-5
+}
+/* Select Payment */
+.sel_pay{
+    @apply absolute bottom-0 bg-mainRed w-full rounded-t-2xl pt-5 pb-3 px-4
+}
+.pay_head{
+    @apply text-xl text-white font-medium
+}
+.pay_box{
+    @apply rounded-lg mb-3 mt-3 bg-inputBox flex items-center justify-between px-5 py-4
+}
+.payee{
+    @apply flex items-center gap-4
+}
+.pay_type{
+    @apply text-white text-xl font-medium
+}
+.pay_mth{
+    @apply text-[#fa717166]
+}
+.select input[type="radio"]{
+    @apply h-[1.5rem] w-[1.5rem]
+}
+.line{
+    @apply bg-white w-[90%] mt-5 mb-3 mx-auto  
+}
+.promo{
+    @apply text-white text-xl font-medium
+}
+/* .promo_in{
+    @apply w-[100%] mx-auto my-2 text-white py-2 px-2 rounded-md bg-inputBox outline-none
+} */
+.confirm_screen{
+    @apply h-[100vh] py-8 px-5
+}
+.confirm_top{
+    @apply w-fit float-right pl-3
+}
+.confirm_top img{
+    @apply w-[1.6rem]
+}
+.confirm_img{
+    @apply w-fit mx-auto text-center mt-[70%]
+}
+/* Switch Button */
+.switch{
+    @apply relative inline-block w-[50px] h-[30px]
+}
+.switch input{
+    @apply opacity-0 w-0 h-0
+}
+.slider{
+    @apply absolute rounded-full cursor-pointer top-0 left-0 right-0 bottom-0 bg-inputBox transition-[.4s]
+}
+.slider:before{
+    @apply absolute content-none h-[26px] w-[26px] left-[4px] bottom-[4px] bg-white transition-[.4s]
+}
+.switch input:checked + .slider{
+    @apply bg-inputBox
+}
+.profile_screen{
+    @apply py-5 px-7 h-[100vh] z-50 absolute top-0
+}
+.user_info{
+    @apply text-center mt-10 
+}
+.user_info .name{
+    @apply text-white text-2xl font-medium py-1
+}
+.user_info .mail{
+    @apply text-[#be9f9f] text-base font-normal
+}
+.profile_menu{
+    @apply mt-3
+}
+.menu{
+    @apply flex items-center py-4 gap-4 
+}
+.menu p{
+    @apply text-lg text-white font-normal
+}
+/* HISTORY */
+.history{
+    @apply h-[100vh] 
+}
+.history_cont{
+    @apply bg-bgBox w-full rounded-t-2xl h-full pt-4 px-4
+}
+.history_day{
+    @apply text-2xl font-semibold py-3
+}
+.dest_history{
+    @apply px-3 py-4 rounded-lg bg-white 
+}
+.dest_his_start{
+    @apply flex items-center justify-between pb-4 px-2
+}
+.start{
+    @apply flex items-center gap-3 pt-3
+}
+.start img{
+    @apply w-[20px]  
+}
+.start p{
+    @apply text-lg font-medium text-black
+}
+.star{
+    @apply flex items-center gap-3
+}
+.star img{
+    @apply w-[20px] 
+}
+.star p{
+    @apply text-lg font-medium text-black
+}
+.hist_line{
+    @apply w-[100%] mx-auto text-black bg-black
+}
+.hist_card{
+    @apply mx-2
+}
+/* SETTINGS */
+.settings{
+    @apply bg-bgBox h-[100vh] rounded-t-2xl px-4 py-6
+}
+.set_menu{
+    @apply flex items-center my-4 justify-between py-3 border border-borderLine bg-borderBg px-2  rounded-lg
+}
+.set_menu .set_item{
+    @apply text-lg font-normal 
+}
+.set_item .set_var{
+    @apply font-normal text-lg
+}
+.payment_page{
+    @apply bg-bgBox rounded-t-xl h-[100vh] px-4 py-5
+}
+.payee_type{
+    @apply mb-4 border gap-4 border-borderLine rounded-xl flex items-center py-3 px-3 bg-borderBg 
+}
+.payee_type img{
+    @apply w-[60px] 
+}
+.pay_abt_type{
+    @apply text-black text-xl font-medium
+}
+.pay_abt_mth{
+    @apply text-sm text-borderLine 
+}
+.add_card{
+    @apply text-[#ffaa2a] float-right 
+}
+.recent{
+    @apply pt-10
+}
+.rec_act{
+    @apply text-xl font-semibold py-3
+}
+/* ADD CARD */
+.pay_screen{
+    @apply bg-bgBox px-4 py-4 rounded-t-lg h-[100vh]
+}
+.card_num p{
+    @apply text-xl text-black font-medium pb-2
+}
+.card_num input{
+    @apply border-borderLine border w-[100%] mx-auto rounded-lg bg-borderBg py-2 px-4 text-lg text-black outline-none
+}
+.card_num{
+    @apply mb-5
+}
+.card_details{
+    @apply flex items-center justify-between pb-3 mb-2
+}
+.card_detail_abt p{
+    @apply text-lg font-medium  pb-1
+}
+.card_detail_abt .select{
+    @apply flex items-center gap-3
+}
+.card_exp p{
+    @apply text-lg font-medium pb-1
+}
+.select select{
+    @apply text-lg py-2 px-2 rounded-lg bg-borderBg border border-borderLine
+}
+.card_exp input{
+    @apply text-lg py-2 px-2 rounded-lg w-[5rem] border border-borderLine bg-borderBg
+}
+.card_holder p{
+    @apply text-lg font-medium  pb-1
+}
+.card_holder input{
+    @apply text-lg font-normal py-1 px-2 rounded-lg outline-none w-[100%] bg-borderBg border border-borderLine 
+}
+.add_card_btn{
+    @apply py-2 text-white bg-secondRed mt-[4rem]
+}
+/* BOOKING PAGE */
+.booking_page{
+    @apply h-[100vh]
+}
+.booking-page{
+    @apply px-5
+}
+.booking-page .search_book{
+    @apply flex items-center bg-white mb-5 px-2 py-1 rounded-lg
+}
+.booking-page input{
+    @apply w-full text-lg outline-none pl-2 
+}
+.booking-page img{
+    @apply w-[1rem]
+}
+.car_book{
+    @apply bg-white rounded-xl
+}
+.car_book .book_car{
+    @apply mx-auto w-[100%]
+}
+.car_name{
+    @apply text-black text-lg px-2 font-medium pb-1
+}
+.car_feat{
+    @apply flex items-center gap-4 px-2
+}
+.car_apps{
+    @apply flex items-center gap-1
+}
+.car_apps img{
+    @apply w-[1.3rem] 
+}
+.car_avail{
+    @apply flex rounded-lg mt-2 items-center justify-between px-2 py-2 bg-gray-100
+}
+.car_avail_abt p{
+    @apply flex items-center gap-3 py-1
+}
+/* Load Vechicle Info */
+.vechicle_page{
+    @apply pt-6 h-[100vh]
+}
+.welcome_back{
+    @apply px-4
+}
+.vech_info{
+    @apply px-4
+}
+.vech_name{
+    @apply mt-5
+}
+.vech_name_head{
+    @apply text-black text-4xl font-bold
+}
+.vech_name_sub{
+    @apply text-white text-lg font-normal pt-2
+}
+.vech_img{
+    @apply w-[200%] mx-auto
+}
+.vech_spec{
+    @apply mt-3
+}
+.vech_spec .spec_vech{
+    @apply text-white font-semibold text-2xl 
+}
+.spec_list{
+    @apply flex items-center gap-4 mt-4
+}
+.spec_info{
+    @apply border-2 border-[#b29494] rounded-lg px-1 py-1 w-[6.25rem] h-[5.65rem] 
+}
+.spec_info img{
+    @apply w-[1.5rem] mb-2
+}
+.spec_info .spec_info_type{
+    @apply text-base text-gray-700 font-semibold
+}
+.spec_info .spec_info_type_abt{
+    @apply font-semibold text-black
+}
+.vech_feat{
+    @apply mt-6
+}
+.vech_feat .car_feat_head{
+    @apply text-white font-semibold text-2xl
+}
+.car_feat_app{
+    @apply flex items-center gap-2 py-1
+}
+.car_feat_app p{
+    @apply text-base text-white 
+}
+.vech_cost_box{
+    @apply absolute bottom-0 w-full 
+}
+.vech_cost_book{
+    @apply flex items-center justify-between px-4 py-3 bg-black text-white w-full
+}
+.vech_cost_pri{
+    @apply py-2
+}
+.vech_cost_pri .price{
+    @apply text-gray-400 text-lg font-medium
+}
+.vech_cost_pri .amount{
+    @apply text-white text-xl font-semibold
+}
+.vech_cost_book_now{
+    @apply bg-mainRed py-2 px-3 rounded-lg
+}
+.vech_cost_book_now p{
+    @apply text-white text-lg font-medium
+}
+/* BOOK SEAT */
+.book_seat{
+    @apply px-5 h-[100vh] py-6
+}
+.book_seat_head{
+    @apply text-center text-xl font-semibold text-white mt-5
+}
+.seat_av{
+    @apply bg-white rounded-xl mt-[3rem] mx-auto w-full grid grid-cols-3 px-3 py-3
+}
+.seat_av img{
+    @apply py-2 px-3
+}
+.seat_status{
+    @apply mt-8
+}
+.seat_status_booked{
+    @apply flex items-center gap-3 py-2
+}
+.seat_status_booked p{
+    @apply text-white font-normal text-lg
+}
+.login_options_box{
+    @apply absolute bottom-0
+}
+.div_top_sc{
+    @apply bg-mainRed rounded-b-[3rem] px-5 flex items-center w-full pt-6
+}
+.div_top_scr p{
+    @apply text-center w-fit mx-auto text-white font-semibold text-xl
+}
+.div_top_sc img{
+    @apply h-[1.3rem]
+}
+.div_top_scr{
+    @apply mb-24 flex items-center w-full
+}
+.conf_screen{
+    @apply h-[100vh] 
+}
+.conf_det{
+    @apply w-full px-4
+}
+.conf_det .conf_img{
+    @apply w-[80%] mx-auto py-3 mt-[20%] 
+}
+.conf_det .conf_text{
+    @apply py-4 text-center 
+}
+.conf_text h3{
+    @apply text-white text-2xl font-medium
+}
+.conf_text p{
+    @apply text-gray-800 font-semibold
+}
+.confirm_btns{
+    @apply flex items-center gap-5 px-4 mt-8
+}
+.confirm_btns .decline_req_btn{
+    @apply px-2 py-2 rounded-lg bg-inputBox
+}
+.decline_req_btn img{
+    @apply w-6
+}
+.confirm_req_btn{
+    @apply bg-white rounded-md text-mainRed font-medium py-1 px-3 w-full
+}
+.confirm_req_btn p{
+    @apply text-[1rem] mx-auto w-full text-center 
+}
+.sxdsa{
+    @apply bg-[#f4f6fa] pb-10 h-[100vh]
+}
+.dash_bal_card{
+    @apply bg-white mx-5 rounded-md -mt-12
+}
+.dash_bal_card_day{
+    @apply text-center text-black text-2xl font-bold pt-2
+}
+.dash_bal_card_amt{
+    @apply text-center text-secondRed font-extrabold text-2xl pb-3
+}
+.dash_ride{
+    @apply flex items-center justify-between
+}
+.dash_ride p{
+    @apply flex items-center gap-2 px-5 py-3 text-black text-lg font-semibold
+}
+.dash_wallet_card{
+    @apply bg-white mx-5 rounded-md mt-4 py-4
+}
+.wallet_balance{
+    @apply px-4 flex py-2 items-center justify-between
+}
+.wal_bal_head{
+    @apply text-black font-bold text-xl
+}
+.wal_bal_amt{
+    @apply text-mainRed font-bold text-2xl
+}
+.wal_withdrawl_btn{
+    @apply text-mainRed bg-[#f7d3d3] px-2 py-1 rounded-md font-semibold text-lg
+}
+.wall_hist{
+    @apply flex items-center justify-between px-4 py-1
+}
+.wall_hist p{
+    @apply text-lg font-medium
+}
+.trip_goin_info{
+    @apply flex items-center py-2 gap-2
+}
+.trip_goin_info img{
+    @apply w-12
+}
+.trip_goin_info p{
+    @apply text-lg font-semibold
+}
+.trip_head{
+    @apply px-4
+}
+.trip_map{
+    @apply px-4 mt-3 rounded-md mb-3
+}
+.wall_hist_infoo{
+    @apply flex items-center gap-3 
+}
+.wall_hist .ammt{
+    @apply text-secondRed text-lg font-semibold
+}
+.withd_top{
+    @apply flex items-center justify-between
+}
+.hist_with_card{
+    @apply px-4
+}
+.withd_bal{
+    @apply flex items-center justify-between pt-4 pb-2
+}
+.withddd{
+    @apply flex items-center gap-4
+}
+.withddd p{
+    @apply font-medium text-base
+}
+.withd_bal .amttm{
+    @apply text-secondRed font-semibold text-lg
+}
+.driver_profile_abt{
+    @apply flex items-center -mt-10 mx-5 px-4 rounded-xl justify-between bg-white py-4
+}
+.dri_pro_abt{
+    @apply flex items-center gap-5
+}
+.dri_pro_abt img{
+    @apply w-[50px] 
+}
+.driv_info .driv_info_name{
+    @apply text-black font-bold text-xl
+}
+.driv_info .driv_info_car{
+    @apply text-black font-normal
+}
+.driv_info_btn{
+    @apply text-mainRed text-lg px-3 py-1 rounded-lg font-bold bg-[#eac4c4]
+}
+.driver_profile_det{
+    @apply bg-white px-4 py-3 mx-5 rounded-xl mt-3
+}
+.each_detail{
+    @apply flex items-center gap-4 px-3 my-3
+}
+.each_detail p{
+    @apply font-medium
+}
